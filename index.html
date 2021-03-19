@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Heart Shape with CSS</title>
+        <link type="text/css" rel="stylesheet" href="index.css" />
+        <style>
+            .heart {
+                background-color: hsl(299, 100%, 50%);
+                height: 2em;
+                width: 2em;
+                position: relative;
+                transform: rotate(45deg);
+            }
+
+            .heart::before {
+                content: '';
+                background-color: hsl(299, 100%, 50%);
+                width: 2em;
+                height: 2em;
+                position: absolute;
+                border-radius: 50%;
+                top: -50%;
+                left: 0%;
+            }
+
+            .heart::after {
+                content: '';
+                background-color: hsl(299, 100%, 50%);
+                width: 2em;
+                height: 2em;
+                position: absolute;
+                border-radius: 50%;
+                top: 0%;
+                left: -50%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="heart"></div>
+        </main>
+    </body>
+</html>
